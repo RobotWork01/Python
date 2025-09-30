@@ -96,7 +96,7 @@ PySimpleGUI パッケージは商用利用が有償化されて
 ２．コンパイルを実行してexeファイル「main.exe」を作成する。
     py -m  PyInstaller main.py --onefile
 ```
-＜＜コンパイル＆exeファイルを作成結果＞＞
+＜＜コンパイル＆exeファイル「main.exe」作成結果＞＞
 ```
 100 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
 522 INFO: PyInstaller: 6.16.0, contrib hooks: 2025.9
