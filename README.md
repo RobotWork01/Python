@@ -11,7 +11,7 @@ https://www.jetbrains.com/pycharm/download/#section=windows
 
 ★無料版
 https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
-
+```
 日本語変換ツール(お勧め出来ないです、ごめんなさい！
 どうしてかというとPython用IDEが起動出来なくなってしまい解決できなかったので、
 Python用IDEをアンインストールして再度インストールしたのです((+_+))
@@ -20,7 +20,7 @@ Python用IDEをアンインストールして再度インストールしたの�
 　↓　↓　↓
 　Preparing to download Eclipse Pleiades plugin
 　https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/build/stable/pleiades-win.zip
-
+```
 ### Pytho(パイソン)のバージョンを確認！する方法
 py -V
 Python 3.9.1
@@ -30,7 +30,7 @@ py -3.9 -m pip uninstall pyInstaller
 
 ### pyinstaller(3.9)をインストールする方法
 py -3.9 -m pip install pyinstaller
-
+```
 c:\Python39\Lib\site-packages>py -3.9 -m pip install pyinstaller
 Requirement already satisfied: pyinstaller in c:\python39\lib\site-packages (4.10)
 Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from pyinstaller) (49.2.1)
@@ -39,10 +39,10 @@ Requirement already satisfied: pefile>=2017.8.1; sys_platform == "win32" in c:\p
 Requirement already satisfied: pyinstaller-hooks-contrib>=2020.6 in c:\python39\lib\site-packages (from pyinstaller) (2022.3)
 Requirement already satisfied: altgraph in c:\python39\lib\site-packages (from pyinstaller) (0.17.2)
 Requirement already satisfied: future in c:\python39\lib\site-packages (from pefile>=2017.8.1; sys_platform == "win32"->pyinstaller) (0.18.2)
-
+```
 ### freesimpleguiをインストールする方法
 C:\WINDOWS\system32>pip install freesimplegui
-
+```
 WARNING: Ignoring invalid distribution -p (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -sa (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
@@ -71,7 +71,7 @@ WARNING: Ignoring invalid distribution - (c:\python310\lib\site-packages)
 
 [notice] A new release of pip available: 22.3.1 -> 25.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
-
+```
 
 ### PyCharm IDE利用：freesimpleguiの実行結果
 C:\Python39\python.exe C:/Users/XXXXX/開発技術/Python（パイソン）/PythonGUI/main.py
