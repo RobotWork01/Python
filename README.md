@@ -88,13 +88,15 @@ PySimpleGUI パッケージは商用利用が有償化されて
 ```
 
 ＜＜コンパイル＞＞
+```
 １．コンパイルしたいパイソンの配下に移動する。
     cd C:\Users\XXXXX\test\
 
 ２．コンパイルを実行してexeファイルを作成する。
     py -m  PyInstaller main.py --onefile
-
+```
 ＜＜コンパイル＆exeファイルを作成結果＞＞
+```
 100 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
 522 INFO: PyInstaller: 6.16.0, contrib hooks: 2025.9
 523 INFO: Python: 3.10.5
@@ -165,26 +167,26 @@ PySimpleGUI パッケージは商用利用が有償化されて
 40738 INFO: Fixing EXE headers
 42391 INFO: Building EXE from EXE-00.toc completed successfully.
 42425 INFO: Build complete! The results are available in: C:\Users\XXXXX\開発技術\Python（パイソン）\PythonGUI\dist
-
-３．exeファイルを実行する。
-C:\Users\XXXXX\開発技術\Python（パイソン）\PythonGUI\dist\main.exe
-
+```
 
 ### Windows10開発環境『MSDOSプロンプト』で、
 ### コンパイルした後にexeファイルを作成する方法
 
 ＜＜シナリオ１＞＞
+```
 １．コンパイルしたいパイソン3.9の配下に移動する。
 cd C:\Python39\Lib\site-packages
 
 ２．コンパイルを実行してexeファイルを作成する。
 py -m PyInstaller C:\Users\XXXXX\test\main.py
+```
 
 ＜＜シナリオ１のexeファイル実行結果＞＞
 C:\Python39\Lib\site-packages\main\dist\main>C:\Python39\Lib\site-packages\main\dist\main\main
 Hi, PyCharm
 
 ＜＜シナリオ２＞＞
+```
 １．コンパイルしたいパイソンの配下に移動する。
     cd C:\Users\XXXXX\test\
 
@@ -193,9 +195,10 @@ Hi, PyCharm
 
     最後に「INFO: Building EXE from EXE-00.toc completed successfully.」と出ていればexe作成は成功です。
     (*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')(*'▽')
-
+```
 
 ＜＜シナリオ２のコンパイル実行結果＞＞
+```
 cd C:\Users\XXXXX\test\
 C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 1203 INFO: PyInstaller: 4.10
@@ -281,16 +284,19 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 57029 INFO: Updating resource type 24 name 1 language 0
 57051 INFO: Appending PKG archive to EXE
 66557 INFO: Building EXE from EXE-00.toc completed successfully.
-
+```
 
 ### JetBrains社のPython開発環境『PyCharm』（パイチャーム）で、
 ### Terminalウィンドウ（ターミナル・ウィンドウ）でのコンパイルを実施する場合
 
 ＜＜シナリオ＞＞
+```
 cd C:\Python39\Lib\site-packages
 py -m PyInstaller C:\Users\XXXXX\test\main.py
+```
 
 ＜＜実行結果＞＞
+```
 PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
 563 INFO: PyInstaller: 4.10
 563 INFO: Python: 3.9.1
@@ -378,6 +384,7 @@ PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
 35400 INFO: Building COLLECT because COLLECT-00.toc is non existent
 35400 INFO: Building COLLECT COLLECT-00.toc
 36775 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+```
 
 最後に「INFO: Building EXE from EXE-00.toc completed successfully.」と出ていれば完了です。
 (*'▽')
@@ -386,6 +393,7 @@ PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
 ###  PythonのEelを使って簡単にGUIを実装
 ###   参考：
 ###    https://note.com/asamin_moto/n/n1120f624ef68
+```
 C:\Python39\Lib\site-packages\main\dist\main>pip install eel
 WARNING: Ignoring invalid distribution -p (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
@@ -448,4 +456,4 @@ WARNING: Ignoring invalid distribution - (c:\python310\lib\site-packages)
 
 [notice] A new release of pip available: 22.3.1 -> 25.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
-
+```
