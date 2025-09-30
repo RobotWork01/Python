@@ -1,9 +1,7 @@
 # Python
 Python(パイソン)
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★Python開発環境を作ってみよう（インストール手順）
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### Python開発環境を作ってみよう（インストール手順）
 参考サイト：
 https://dropoutgs.com/python-install/
 
@@ -23,20 +21,14 @@ Python用IDEをアンインストールして再度インストールしたの�
 　Preparing to download Eclipse Pleiades plugin
 　https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/build/stable/pleiades-win.zip
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★Pytho(パイソン)のバージョンを確認！する方法
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### Pytho(パイソン)のバージョンを確認！する方法
 py -V
 Python 3.9.1
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★pyinstaller(3.9)をアンインストールする方法
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### pyinstaller(3.9)をアンインストールする方法
 py -3.9 -m pip uninstall pyInstaller
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★pyinstaller(3.9)をインストールする方法
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### pyinstaller(3.9)をインストールする方法
 py -3.9 -m pip install pyinstaller
 
 c:\Python39\Lib\site-packages>py -3.9 -m pip install pyinstaller
@@ -48,10 +40,9 @@ Requirement already satisfied: pyinstaller-hooks-contrib>=2020.6 in c:\python39\
 Requirement already satisfied: altgraph in c:\python39\lib\site-packages (from pyinstaller) (0.17.2)
 Requirement already satisfied: future in c:\python39\lib\site-packages (from pefile>=2017.8.1; sys_platform == "win32"->pyinstaller) (0.18.2)
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★freesimpleguiをインストールする方法
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### freesimpleguiをインストールする方法
 C:\WINDOWS\system32>pip install freesimplegui
+
 WARNING: Ignoring invalid distribution -p (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -sa (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
@@ -82,20 +73,17 @@ WARNING: Ignoring invalid distribution - (c:\python310\lib\site-packages)
 [notice] To update, run: python.exe -m pip install --upgrade pip
 
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★PyCharm IDE利用：freesimpleguiの実行結果
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### PyCharm IDE利用：freesimpleguiの実行結果
 C:\Python39\python.exe C:/Users/XXXXX/開発技術/Python（パイソン）/PythonGUI/main.py
 Process finished with exit code 0
-
 
 ※参考：https://teratail.com/questions/s3zojfvst32yit
 PySimpleGUI パッケージは商用利用が有償化されて
 個人利用もライセンス登録が必要になりました。
-
-Python2年生 デスクトップアプリ開発のしくみ 体験してわかる！会話でまなべる！ ダウンロード｜翔泳社の本
-https://www.shoeisha.co.jp/book/download/9784798174990/detail
-PySimpleGUI パッケージの代替として、FreeSimpleGUI パッケージの利用を勧めています。
+　参考：
+　Python2年生 デスクトップアプリ開発のしくみ 体験してわかる！会話でまなべる！ ダウンロード｜翔泳社の本
+　https://www.shoeisha.co.jp/book/download/9784798174990/detail
+　PySimpleGUI パッケージの代替として、FreeSimpleGUI パッケージの利用を勧めています。
 
 
 ＜＜コンパイル＞＞
@@ -181,10 +169,8 @@ PySimpleGUI パッケージの代替として、FreeSimpleGUI パッケージの
 C:\Users\XXXXX\開発技術\Python（パイソン）\PythonGUI\dist\main.exe
 
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★Windows10開発環境『MSDOSプロンプト』で、
-★コンパイルした後にexeファイルを作成する方法
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### Windows10開発環境『MSDOSプロンプト』で、
+### コンパイルした後にexeファイルを作成する方法
 
 ＜＜シナリオ１＞＞
 １．コンパイルしたいパイソン3.9の配下に移動する。
@@ -296,10 +282,9 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 66557 INFO: Building EXE from EXE-00.toc completed successfully.
 
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★JetBrains社のPython開発環境『PyCharm』（パイチャーム）で、
-★Terminalウィンドウ（ターミナル・ウィンドウ）でのコンパイルを実施する場合
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+### JetBrains社のPython開発環境『PyCharm』（パイチャーム）で、
+### Terminalウィンドウ（ターミナル・ウィンドウ）でのコンパイルを実施する場合
+
 ＜＜シナリオ＞＞
 cd C:\Python39\Lib\site-packages
 py -m PyInstaller C:\Users\XXXXX\test\main.py
@@ -397,12 +382,9 @@ PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
 (*'▽')
 
 
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
-★ PythonのEelを使って簡単にGUIを実装
-★  参考：
-★   https://note.com/asamin_moto/n/n1120f624ef68
-★
-★＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝★
+###  PythonのEelを使って簡単にGUIを実装
+###   参考：
+###    https://note.com/asamin_moto/n/n1120f624ef68
 C:\Python39\Lib\site-packages\main\dist\main>pip install eel
 WARNING: Ignoring invalid distribution -p (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
