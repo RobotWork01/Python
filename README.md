@@ -23,8 +23,9 @@ https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows
 ```
 ### Pytho(パイソン)のバージョンを確認！する方法
 py -V
+```
 Python 3.9.1
-
+```
 ### pyinstaller(3.9)をアンインストールする方法
 py -3.9 -m pip uninstall pyInstaller
 
