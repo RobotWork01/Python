@@ -93,7 +93,7 @@ PySimpleGUI パッケージは商用利用が有償化されて
 １．コンパイルしたいパイソンの配下に移動する。
     cd C:\Users\XXXXX\test\
 
-２．コンパイルを実行してexeファイルを作成する。
+２．コンパイルを実行してexeファイル「main.exe」を作成する。
     py -m  PyInstaller main.py --onefile
 ```
 ＜＜コンパイル＆exeファイルを作成結果＞＞
