@@ -80,11 +80,12 @@ Process finished with exit code 0
 ※参考：https://teratail.com/questions/s3zojfvst32yit
 PySimpleGUI パッケージは商用利用が有償化されて
 個人利用もライセンス登録が必要になりました。
+```
 　参考：
 　Python2年生 デスクトップアプリ開発のしくみ 体験してわかる！会話でまなべる！ ダウンロード｜翔泳社の本
 　https://www.shoeisha.co.jp/book/download/9784798174990/detail
 　PySimpleGUI パッケージの代替として、FreeSimpleGUI パッケージの利用を勧めています。
-
+```
 
 ＜＜コンパイル＞＞
 １．コンパイルしたいパイソンの配下に移動する。
