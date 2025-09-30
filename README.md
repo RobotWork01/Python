@@ -13,9 +13,9 @@ https://www.jetbrains.com/pycharm/download/#section=windows
 https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
 ```
 日本語変換ツール(お勧め出来ないです、ごめんなさい！
-どうしてかというとPython用IDEが起動出来なくなってしまい解決できなかったので、
-Python用IDEをアンインストールして再度インストールしたのです((+_+))
-まぁ別に日本語でなくても当面はいいかなぁと思って諦めちゃいましたー($・・)/~~~)
+どうしてかというとPython用IDE『PyCharm』（パイチャーム）が起動出来なくなってしまい解決できなかったので、
+仕方なく、Python用IDE『PyCharm』（パイチャーム）をアンインストールして再度インストールして解決いたしました((+_+))
+「日本語でなくても当面はいいかなぁ」と思って『PyCharm』（パイチャーム）の日本語化を諦めた次第ですー($・・)/~~~)
 　https://mergedoc.osdn.jp/
 　↓　↓　↓
 　Preparing to download Eclipse Pleiades plugin
