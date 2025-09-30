@@ -393,7 +393,5 @@ PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
 
 ### 参考本：
 <a href="https://www.google.co.jp/books/edition/_/XEYUEAAAQBAJ?hl=ja&sa=X&ved=2ahUKEwja0OaLwIGQAxU9klYBHY7BNywQ8fIDegQIGBAF">シゴトがはかどるPython自動処理の教科書
-```
 <img width="126" height="162" alt="image" src="https://github.com/user-attachments/assets/2c1605ab-2f6c-43c7-b7de-18f8c014b14e" />
-```
 </a>
