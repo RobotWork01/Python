@@ -170,7 +170,6 @@ PySimpleGUI パッケージは商用利用が有償化されて
 42425 INFO: Build complete! The results are available in: C:\Users\XXXXX\開発技術\Python（パイソン）\PythonGUI\dist
 ```
 
-### Windows10開発環境『MSDOSプロンプト』で、
 ### コンパイルした後にexeファイルを作成する方法
 
 ＜＜シナリオ１＞＞
@@ -287,109 +286,8 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 66557 INFO: Building EXE from EXE-00.toc completed successfully.
 ```
 
-### JetBrains社のPython開発環境『PyCharm』（パイチャーム）で、
-### Terminalウィンドウ（ターミナル・ウィンドウ）でのコンパイルを実施する場合
-
-＜＜シナリオ＞＞
-```
-cd C:\Python39\Lib\site-packages
-py -m PyInstaller C:\Users\XXXXX\test\main.py
-```
-
+### 一番簡単なGUI
 ＜＜実行結果＞＞
-```
-PS C:\Python39\Lib\site-packages> py -m PyInstaller C:\Users\XXXXX\test\main.py
-563 INFO: PyInstaller: 4.10
-563 INFO: Python: 3.9.1
-563 INFO: Platform: Windows-10-10.0.19041-SP0
-594 INFO: wrote C:\Python39\Lib\site-packages\main\main.spec
-612 INFO: UPX is not available.
-614 INFO: Extending PYTHONPATH with paths
-['C:\\Users\\XXXXX\\PycharmProjects\\test']
-1609 INFO: checking Analysis
-1609 INFO: Building Analysis because Analysis-00.toc is non existent
-1609 INFO: Initializing module dependency graph...
-1625 INFO: Caching module graph hooks...
-1710 INFO: Analyzing base_library.zip ...
-13494 INFO: Processing pre-find module path hook distutils from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path\\hook-distutils.py'.
-13513 INFO: distutils: retargeting to non-venv dir 'C:\\Python39\\lib'
-23082 INFO: Caching module dependency graph...
-24269 INFO: running Analysis Analysis-00.toc
-24285 INFO: Adding Microsoft.Windows.Common-Controls to dependent assemblies of final executable
-  required by C:\Python39\python.exe
-25689 INFO: Analyzing C:\Users\XXXXX\test\main.py
-25705 INFO: Processing module hooks...
-25705 INFO: Loading module hook 'hook-difflib.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-25705 INFO: Loading module hook 'hook-distutils.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-25705 INFO: Loading module hook 'hook-distutils.util.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-25720 INFO: Loading module hook 'hook-encodings.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26137 INFO: Loading module hook 'hook-heapq.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26146 INFO: Loading module hook 'hook-lib2to3.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26375 INFO: Loading module hook 'hook-multiprocessing.util.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26375 INFO: Loading module hook 'hook-pickle.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26391 INFO: Loading module hook 'hook-sysconfig.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26391 INFO: Loading module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26406 INFO: Loading module hook 'hook-xml.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-26607 INFO: Loading module hook 'hook-_tkinter.py' from 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks'...
-27247 INFO: checking Tree
-27247 INFO: Building Tree because Tree-00.toc is non existent
-27247 INFO: Building Tree Tree-00.toc
-27663 INFO: checking Tree
-27663 INFO: Building Tree because Tree-01.toc is non existent
-27663 INFO: Building Tree Tree-01.toc
-28127 INFO: checking Tree
-28127 INFO: Building Tree because Tree-02.toc is non existent
-28127 INFO: Building Tree Tree-02.toc
-28207 INFO: Looking for ctypes DLLs
-28296 INFO: Analyzing run-time hooks ...
-28296 INFO: Including run-time hook 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_subprocess.py'
-28311 INFO: Including run-time hook 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py'
-28327 INFO: Including run-time hook 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py'
-28349 INFO: Including run-time hook 'C:\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py'
-28380 INFO: Looking for dynamic libraries
-28966 INFO: Looking for eggs
-28966 INFO: Using Python library C:\Python39\python39.dll
-28966 INFO: Found binding redirects:
-[]
-28982 INFO: Warnings written to C:\Python39\Lib\site-packages\main\build\main\warn-main.txt
-29174 INFO: Graph cross-reference written to C:\Python39\Lib\site-packages\main\build\main\xref-main.html
-29237 INFO: checking PYZ
-29237 INFO: Building PYZ because PYZ-00.toc is non existent
-29237 INFO: Building PYZ (ZlibArchive) C:\Python39\Lib\site-packages\main\build\main\PYZ-00.pyz
-31462 INFO: Building PYZ (ZlibArchive) C:\Python39\Lib\site-packages\main\build\main\PYZ-00.pyz completed successfully.
-31509 INFO: checking PKG
-31509 INFO: Building PKG because PKG-00.toc is non existent
-31515 INFO: Building PKG (CArchive) main.pkg
-31616 INFO: Building PKG (CArchive) main.pkg completed successfully.
-31631 INFO: Bootloader C:\Python39\Lib\site-packages\PyInstaller\bootloader\Windows-64bit\run.exe
-31631 INFO: checking EXE
-31631 INFO: Building EXE because EXE-00.toc is non existent
-31631 INFO: Building EXE from EXE-00.toc
-31839 INFO: Copying icon to EXE
-31839 INFO: Copying icons from ['C:\\Python39\\Lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-console.ico']
-31847 INFO: Writing RT_GROUP_ICON 0 resource with 104 bytes
-31847 INFO: Writing RT_ICON 1 resource with 3752 bytes
-31847 INFO: Writing RT_ICON 2 resource with 2216 bytes
-31847 INFO: Writing RT_ICON 3 resource with 1384 bytes
-31847 INFO: Writing RT_ICON 4 resource with 37019 bytes
-31847 INFO: Writing RT_ICON 5 resource with 9640 bytes
-31847 INFO: Writing RT_ICON 6 resource with 4264 bytes
-31857 INFO: Writing RT_ICON 7 resource with 1128 bytes
-31949 INFO: Copying 0 resources to EXE
-31949 INFO: Emedding manifest in EXE
-31949 INFO: Updating manifest in C:\Python39\Lib\site-packages\main\build\main\main.exe.notanexecutable
-31959 INFO: Updating resource type 24 name 1 language 0
-32137 INFO: Appending PKG archive to EXE
-35369 INFO: Building EXE from EXE-00.toc completed successfully.
-35400 INFO: checking COLLECT
-35400 INFO: Building COLLECT because COLLECT-00.toc is non existent
-35400 INFO: Building COLLECT COLLECT-00.toc
-36775 INFO: Building COLLECT COLLECT-00.toc completed successfully.
-```
-
-最後に「INFO: Building EXE from EXE-00.toc completed successfully.」と出ていれば完了です。
-(*'▽')
-
 <img width="1223" height="639" alt="image" src="https://github.com/user-attachments/assets/6d0dc960-215f-4ca7-a685-f9a69f0e5ed3" />
 
 ### 参考本：シゴトがはかどるPython自動処理の教科書
