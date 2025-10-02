@@ -289,7 +289,7 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 ### 一番簡単なGUI
 <a href="./PythonGUI/main.py">プログラムコードはこちらをクリック</a>
 ＜＜実行結果＞＞
-<img width="1223" height="639" alt="image" src="https://github.com/user-attachments/assets/6d0dc960-215f-4ca7-a685-f9a69f0e5ed3" />
+<img width="1646" height="977" alt="image" src="https://github.com/user-attachments/assets/4585938a-11e9-47ac-9adf-e8404bb08adc" />
 
 ### 参考サイト
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
