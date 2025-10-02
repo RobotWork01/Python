@@ -292,7 +292,8 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 <img width="1646" height="977" alt="image" src="https://github.com/user-attachments/assets/556a38ef-7d80-4f98-a76e-0cad640d19d8" />
 
 ### Tkinterで2つのデータを結合し出力するGUIアプリ
-<a href="./PythonGUI/main.py">プログラムコードはこちらをクリック</a>
+https://github.com/RobotWork01/Python/blob/main/PythonCSVExcel_MERGE/PythonCSVExcel_MERGE.py
+<a href="./PythonCSVExcel_MERGE/PythonCSVExcel_MERGE.py">プログラムコードはこちらをクリック</a>
 ＜＜実行結果＞＞
 <img width="1225" height="636" alt="image" src="https://github.com/user-attachments/assets/f5f21b14-12c2-45f0-a37e-4759942bc4a7" />
 
