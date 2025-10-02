@@ -296,6 +296,9 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 ＜＜実行結果＞＞
 <img width="1225" height="636" alt="image" src="https://github.com/user-attachments/assets/f5f21b14-12c2-45f0-a37e-4759942bc4a7" />
 
+※exeファイルは大きすぎてGitHub にアップロード出来ません
+<img width="741" height="88" alt="image" src="https://github.com/user-attachments/assets/f68a9835-ed33-4b7d-80af-427d5c44cf97" />
+
 ### 参考サイト
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
 FreeSimpleGUIの使い方・クイックスタートガイド
