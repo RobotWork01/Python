@@ -1,4 +1,4 @@
-('C:\\Users\\midor\\開発技術\\Python（パイソン）\\PythonGUI\\build\\main\\PYZ-00.pyz',
+('C:\\Users\\midor\\OneDrive\\ドキュメント\\GitHub\\Python\\PythonGUI\\build\\main\\PYZ-00.pyz',
  [('FreeSimpleGUI',
    'C:\\Python310\\lib\\site-packages\\FreeSimpleGUI\\__init__.py',
    'PYMODULE'),
