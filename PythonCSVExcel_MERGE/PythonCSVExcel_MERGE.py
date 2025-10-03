@@ -326,7 +326,7 @@ class Application(tk.Frame):
 # 主処理
 #---------------------------------------#
 def main():
-    root = tk.Tk()                     # TkinterのTKフレーム起動(ウィンドウ画面オープン)
+    root = tk.Tk()                     # メインウィンドウを作成
     app = Application(master=root)     # Applicationクラスを実行する・・・・・・・・・TkinterのTKフレームウィジェット(GUI)の動的作成
     app.mainloop()                     # Applicationクラスの無限ループを宣言する・・・Tkinterの破棄・生成が永遠と実行される
 
@@ -336,4 +336,5 @@ def main():
 if __name__ == "__main__":
     # 主処理
     main()
+
 
