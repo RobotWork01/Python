@@ -10,7 +10,7 @@ https://dropoutgs.com/python-install/
 
 <img width="984" height="804" alt="image" src="https://github.com/user-attachments/assets/75023cee-aeaf-4d55-8e0e-d8d721c58784" style="width: 50%; height: auto;" />
 
-JetBrains社:
+JetBrains社『PyCharm』（パイチャーム）公式ページ:
 <a href="https://www.jetbrains.com/pycharm/download/#section=windows">https://www.jetbrains.com/pycharm/download/#section=windows</a>
 
 ★無料版
