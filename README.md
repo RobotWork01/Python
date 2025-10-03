@@ -7,6 +7,7 @@ https://dropoutgs.com/python-install/
 
 ★Python用IDE『PyCharm』（パイチャーム）は、JetBrains社のPython開発環境ツールです。
 『PyCharm』（パイチャーム）をインストールする方法
+
 <img width="984" height="804" alt="image" src="https://github.com/user-attachments/assets/75023cee-aeaf-4d55-8e0e-d8d721c58784" style="width: 50%; height: auto;" />
 
 https://www.jetbrains.com/pycharm/download/#section=windows
