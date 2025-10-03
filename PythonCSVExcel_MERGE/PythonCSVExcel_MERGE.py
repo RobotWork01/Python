@@ -276,15 +276,17 @@ class Application(tk.Frame):
         self.pb.start(interval=10)
 
     #---------------------------------------------#
-    # 各種未入力チェック処理
+    # 必須入力項目の未入力チェック処理
     #---------------------------------------------#
     def check_file_path(self):
         alert_text = ""
 
-        # パスが設定されているか確認する
-        csv_path = self.csv_entry.get()
-        excel_path = self.excel_entry.get()
-        output_path = self.output_entry.get()
+        # テキストボックスから値を取得
+        csv_path = self.csv_entry.get()             # 入力ファイル「CSVファイルのフルパス」
+        excel_path = self.excel_entry.get()         # 入力ファイル「Excelファイルのフルパス」
+        output_path = self.output_entry.get()       # 出力フォルダ「出力フォルダのフルパス」
+
+        # 未入力チェック処理
         if csv_path == '':
             alert_text += "csvファイル" + "\n"
         if excel_path == '':
@@ -336,5 +338,6 @@ def main():
 if __name__ == "__main__":
     # 主処理
     main()
+
 
 
