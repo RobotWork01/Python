@@ -365,13 +365,19 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 ＜＜実行結果＞＞
 <img width="1646" height="977" alt="image" src="https://github.com/user-attachments/assets/556a38ef-7d80-4f98-a76e-0cad640d19d8" />
 
-### Tkinterで2つのデータを結合し出力するGUIアプリ
+### Tkinter(ティーケーインター)ライブラリで作った「2つのデータを結合し出力するGUIアプリ」
 <a href="./PythonCSVExcel_MERGE/PythonCSVExcel_MERGE.py">プログラムコードはこちらをクリック</a>
 ＜＜実行結果＞＞
 <img width="1225" height="636" alt="image" src="https://github.com/user-attachments/assets/f5f21b14-12c2-45f0-a37e-4759942bc4a7" />
 
 ※exeファイルは大きすぎてGitHub にアップロード出来ません
 <img width="741" height="88" alt="image" src="https://github.com/user-attachments/assets/f68a9835-ed33-4b7d-80af-427d5c44cf97" />
+
+### Tkinter(ティーケーインター)ライブラリで作った「上、左、右の３画面で構成されたフレーム画面（GUI）アプリ」
+<a href="./PythonFrame/PythonFrame.py">プログラムコードはこちらをクリック</a>
+＜＜実行結果＞＞
+<img width="1190" height="790" alt="image" src="https://github.com/user-attachments/assets/7a2bfb20-c818-4f2b-a296-f1a5a422e0ed" />
+
 
 ### 参考サイト
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
