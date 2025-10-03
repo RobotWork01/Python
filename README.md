@@ -3,7 +3,7 @@ Python(パイソン)
 
 ### Python開発環境を作ってみよう（インストール手順）
 参考サイト：
-　<a href="https://prog-8.com/docs/python-env-win">https://prog-8.com/docs/python-env-win Pythonの開発環境を用意しよう！（Windows）</a>
+　<a href="https://prog-8.com/docs/python-env-win">Pythonの開発環境を用意しよう！（Windows）https://prog-8.com/docs/python-env-win </a>
 
 ★Python用IDE『PyCharm』（パイチャーム）は、JetBrains社のPython開発環境ツールです。
 『PyCharm』（パイチャーム）をインストールする方法
