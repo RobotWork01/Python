@@ -1,6 +1,24 @@
 # Python
 Python(パイソン)
 
+### pythonは、メモ帳やサクラエディタでも開発出来ます
+私は、Python用IDE『PyCharm』（パイチャーム）を使用していますが
+IDEはなくても大丈夫です。
+メモ帳やサクラエディタなどでも開発することは可能です。
+
+●便利な点（利点）
+Python用IDE『PyCharm』（パイチャーム）の便利なところはエラーになったときに
+マウスポイント（マウスのポインタを近づける）すると、インストール案内が自動的に表示されてクリックすると
+詳しいダウンロード先やコマンドを知らなくても簡単に必要なインストールが出来ることです。
+
+コンパイルやデバッグもコマンドを知らなくても、実行環境を操作しなくても、簡単にクリックすると出来てしまうことは便利だと思います。
+
+●不便な点（不利な点）
+しかし、注意しなければならないことは無制限にあれこれとインストールしているとPCメモリが不足してしまいますので
+必要最小限のインストールに留めることです。
+また、『PyCharm』（パイチャーム）だけではexeファイルを作成することは出来ません（注：わたくしが知らないだけかもしれません）
+
+
 ### Python開発環境を作ってみよう（インストール手順）
 参考サイト：
 　<a href="https://prog-8.com/docs/python-env-win">Pythonの開発環境を用意しよう！（Windows）https://prog-8.com/docs/python-env-win </a>
@@ -308,7 +326,7 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 FreeSimpleGUIの使い方・クイックスタートガイド
 
 <a href="https://yuya-blog.net/%E3%80%90%E5%AE%8C%E5%85%A8%E7%8B%AC%E5%AD%A6python%E3%80%91tkinter%E3%81%AEttk%E3%81%AF%E3%81%93%E3%82%8C%E3%81%A0%E3%81%91%E8%A6%9A%E3%81%88%E3%81%A6%EF%BC%81%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91/">
-【完全独学Python】Tkinterのttkはこれだけ覚えて！初心者向けに徹底解説！</a> 
+【完全独学Python】Tkinterのttkはこれだけ覚えて！初心者向けに徹底解説！ © 2023 完全独学Python. </a> 
 
 ### 参考本：シゴトがはかどるPython自動処理の教科書
 <a href="https://www.google.co.jp/books/edition/_/XEYUEAAAQBAJ?hl=ja&sa=X&ved=2ahUKEwja0OaLwIGQAxU9klYBHY7BNywQ8fIDegQIGBAF">
