@@ -1,10 +1,28 @@
 # Python
 Python(パイソン)
 
+### pythonでは、何が出来るの？
+
+■バッチ処理（オフライン作業）・・・・基本的に黒い画面（コマンド入力）での操作、他のシステムのバックグラウンド作業となります。
+＜他の開発言語と同じく、ファイル参照・更新やデータベース参照・更新をバックグラウンドで行う＞
+・ExcelからPythonを呼び出す
+・PythonでExcelファイルを作成する
+・PythonでExcelファイルのセルに値を設定する
+・PythonでCSVファイル（カンマ区切り）やTSVファイル（タブ区切り）を読んでEXCELに読み込む
+・WEBブラウザを自動操縦する
+・メールを自動送信する（添付ファイルを自動添付する）
+・Windowsのタスクスケジューラで毎日何時など定期的に実行する。
+
+■フロントエンド処理（オンライン作業）
+＜Pythonの豊富なライブラリでGUIアプリを作成＞
+・WEBサーバーアプリを作る（ファイル参照・更新、データベース参照・更新）
+・ダイアログ表示する（ポップアップメッセージ、ファイル選択、フォルダ選択）
+
 ### pythonは、メモ帳やサクラエディタでも開発出来ます
 私は、Python用IDE『PyCharm』（パイチャーム）を使用していますが
 IDEはなくても大丈夫です。
 メモ帳やサクラエディタなどでも開発することは可能です。好きなようにメモに書けば完成するのです。その点はJAVAも同じです。
+JAVAもEclipseというIDEがなくてもメモ帳で開発することが出来ます。
 
 なのでGitHubなどからプログラムファイルをダウンロードしなくても、拡張子pyのファイルの中身だけをコピペしてメモ帳に貼り付けてあげればプログラム完成です！
 
@@ -110,9 +128,12 @@ WARNING: Ignoring invalid distribution - (c:\python310\lib\site-packages)
 [notice] To update, run: python.exe -m pip install --upgrade pip
 ```
 
-### PyCharm IDE利用：freesimpleguiの実行結果
+### PyCharm IDE利用：freesimplegui(フリー・シンプル・ジーユーアイ)の実行結果
+PyCharmのコマンド画面に、下記のメッセージが表示されました
+```
 C:\Python39\python.exe C:/Users/XXXXX/開発技術/Python（パイソン）/PythonGUI/main.py
 Process finished with exit code 0
+```
 
 ※参考：https://teratail.com/questions/s3zojfvst32yit
 PySimpleGUI パッケージは商用利用が有償化されて
@@ -124,7 +145,9 @@ PySimpleGUI パッケージは商用利用が有償化されて
 　PySimpleGUI パッケージの代替として、FreeSimpleGUI パッケージの利用を勧めています。
 ```
 
-＜＜コンパイル＞＞
+### ＜＜コンパイルは、どうやったら出来るの？＞＞
+まず、事前準備作業です。testフォルダにmain.pyを１つだけ置いください（フォルダ名はお好みで何でも好きな名前で良い、場所もお好みでどこでも良いです）<br/>
+次に、下記のコマンドを入力してください<br/>
 ```
 １．コンパイルしたいパイソンの配下に移動する。
     cd C:\Users\XXXXX\test\
@@ -132,7 +155,8 @@ PySimpleGUI パッケージは商用利用が有償化されて
 ２．コンパイルを実行してexeファイル「main.exe」を作成する。
     py -m  PyInstaller main.py --onefile
 ```
-＜＜コンパイル＆exeファイル「main.exe」作成結果＞＞
+
+### ＜＜コンパイル＆exeファイル「main.exe」作成結果＞＞
 ```
 100 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
 522 INFO: PyInstaller: 6.16.0, contrib hooks: 2025.9
