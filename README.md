@@ -10,7 +10,8 @@ https://dropoutgs.com/python-install/
 
 <img width="984" height="804" alt="image" src="https://github.com/user-attachments/assets/75023cee-aeaf-4d55-8e0e-d8d721c58784" style="width: 50%; height: auto;" />
 
-https://www.jetbrains.com/pycharm/download/#section=windows
+JetBrains社:
+<a href="https://www.jetbrains.com/pycharm/download/#section=windows">https://www.jetbrains.com/pycharm/download/#section=windows</a>
 
 ★無料版
 https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
