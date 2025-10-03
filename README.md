@@ -5,8 +5,10 @@ Python(パイソン)
 参考サイト：
 https://dropoutgs.com/python-install/
 
-★Python用IDEのJetBrains社のPython開発環境
+★Python用IDE『PyCharm』（パイチャーム）は、JetBrains社のPython開発環境ツールです。
 『PyCharm』（パイチャーム）をインストールする方法
+<img width="984" height="804" alt="image" src="https://github.com/user-attachments/assets/75023cee-aeaf-4d55-8e0e-d8d721c58784" />
+
 https://www.jetbrains.com/pycharm/download/#section=windows
 
 ★無料版
