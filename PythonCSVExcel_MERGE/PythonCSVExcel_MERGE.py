@@ -27,7 +27,7 @@ import os
 import pandas as pd
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-#threadingモジュールは、
+#threading(スレッディング)モジュールは、
 #Pythonでマルチスレッドプログラミングを行うための標準ライブラリです。
 #このモジュールを使用すると、複数のスレッドを作成し並列処理を実現できます。
 #スレッドは、OSがプログラムを実行する際の最小単位であり、
@@ -36,19 +36,21 @@ import pandas as pd
 import threading
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-#tkinter(ティーケーインター)
-# Python3でGUIアプリケーションを開発するための標準ライブラリ
+#tkinter(ティーケーインター)ライブラリは、
+# Python3でGUIアプリケーションを開発するための標準ライブラリです。
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 import tkinter as tk
+
+# Tkinter(ティーケーインター)に含まれる拡張モジュール
 from tkinter import *
-from tkinter import ttk
-from tkinter import messagebox
-from tkinter import filedialog
-from tkinter import font
+from tkinter import ttk            # ttkは、“themed tkinter”の略です！ttkを使うと、標準のtkウィジェットよりも見た目が良く、クロスプラットフォームで一貫したスタイルを持つウィジェットを作成できます！
+from tkinter import messagebox     # ポップアップメッセージボックス表示
+from tkinter import filedialog     # ダイアログ表示（ファイル選択、フォルダ選択）
+from tkinter import font           # 文字書式（カスタムフォントを作成）
 
 #------------------------------------------------------------------------------------------------#
 #class Application(tk.Frame):
-#   Tkinterのフレームウィジェットを使用してアプリケーションのフレームを作成するためのクラス定義です。
+#   Tkinter(ティーケーインター)のフレームウィジェットを使用してアプリケーションのフレームを作成するためのクラス定義です。
 #   このクラス内で、フレームの親ウィジェットを定義し、フレーム内に他のウィジェットを配置するためのメソッドを定義します。
 #   クラスをインスタンス化することで、フレームウィジェットを用いてアプリケーションの画面を構築することができます。
 #------------------------------------------------------------------------------------------------#
@@ -59,15 +61,14 @@ class Application(tk.Frame):
     #  その値を初期化処理で利用するための構文です。
     # -----------------------------------------------------------#
     def __init__(self,master):
-        super().__init__(master)
-        #self.pack()
-        self.pack(fill="both", expand=True)                                # TKオブジェクトの起動(フレームをウィンドウ全体に広げる)
-        self.master.title("RobotWork　[csv・Excelファイル結合(マージ)]")   # ウィンドウ・タイトルの設定
-        self.master.geometry('750x300')                                    # 画面サイズ（幅x高さ)
-        self.master.configure(bg="lightblue", padx=10, pady=10)            # 画面背景色（lightblue）
+        super().__init__(master)                                           # フレームの親ウィジェットを定義
+        self.pack(fill="both", expand=True)                                # pack(パック)・・・・・・・・・ TKオブジェクトの起動(フレームをウィンドウ全体に広げる)
+        self.master.title("RobotWork　[csv・Excelファイル結合(マージ)]")     # title(タイトル)・・・・・・・・ウィンドウ・タイトルの設定
+        self.master.geometry('750x300')                                    # geometry (ジオメトリー)・・・・画面サイズ（幅x高さ)
+        self.master.configure(bg="lightblue", padx=10, pady=10)            # configure(コンフィギュア)・・・画面背景色（lightblue）、X軸枠、Y軸枠
 
         #------------------------------------------#
-        # Tkinterのフレームウィジェット動的作成
+        # Tkinterの「フレームウィジェット」動的作成
         #------------------------------------------#
         self.set_csv_widgets()
         self.set_excel_widgets()
@@ -81,18 +82,18 @@ class Application(tk.Frame):
     def set_csv_widgets(self):
 
         # カスタムフォントを作成
-        custom_font = font.Font(family="Helvetica", size=10, weight="bold")  # フォント名、サイズ、太字を指定
+        custom_font = font.Font(family="Helvetica", size=10, weight="bold")  # フォント書式名、文字サイズ、太字を指定
         
         # フレーム
-        self.csv_frame = ttk.Frame(self, padding=10)
-        self.csv_frame.grid(row=0, column=1, sticky=E)
+        self.csv_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション　　　　　
+        self.csv_frame.grid(row=0, column=1, sticky=E)          # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。寄せる方向は英語の方角（North、South、East、West）の頭文字を指定します。
 
-        # タイトル
+        # 画面タイトル
         title_memo = "【Python】2つのデータ(csv＋Excel)を結合し指定した出力フォルダに結果ファイルを出力するGUIアプリ"
-        self.head_title = ttk.Label(self.csv_frame, text=title_memo, padding=(3, 3),foreground='linen', background='lightslategray', font=custom_font)
+        self.head_title = ttk.Label(self.csv_frame, text=title_memo, padding=(3, 3),foreground='linen', background='lightslategray', font=custom_font)  # ラベル前景色(文字色)、ラベル背景色、カスタムフォント 
         self.head_title.pack(side=TOP)
 
-        # ラベル
+        # 項目ラベル
         self.csv_label = ttk.Label(self.csv_frame, text="csvファイル：", padding=(5, 2))
         self.csv_label.pack(side=LEFT)
 
@@ -111,8 +112,8 @@ class Application(tk.Frame):
     #------------------------------------------------------------------------#
     def set_excel_widgets(self):
         # フレーム
-        self.excel_frame = ttk.Frame(self, padding=10)
-        self.excel_frame.grid(row=2, column=1, sticky=E)
+        self.excel_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション
+        self.excel_frame.grid(row=2, column=1, sticky=E)          # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。寄せる方向は英語の方角（North、South、East、West）の頭文字を指定します。
 
         # ラベル
         self.excel_label = ttk.Label(self.excel_frame, text="Excelファイル：", padding=(5, 2))
@@ -133,8 +134,8 @@ class Application(tk.Frame):
     #------------------------------------------------------------------------#
     def set_output_widgets(self):
         # フレーム
-        self.output_frame = ttk.Frame(self, padding=10)
-        self.output_frame.grid(row=4, column=1, sticky=E)
+        self.output_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション
+        self.output_frame.grid(row=4, column=1, sticky=E)          # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。寄せる方向は英語の方角（North、South、East、West）の頭文字を指定します。
 
         # ラベル
         self.output_label = ttk.Label(self.output_frame, text="出力フォルダ：", padding=(5, 2))
@@ -155,8 +156,8 @@ class Application(tk.Frame):
     #------------------------------------------------------------------------#
     def set_run_widgets(self):
         # フレーム
-        #self.run_frame = ttk.Frame(self, padding=10)
-        self.run_frame = ttk.Frame(self, padding=(5,2))
+        #self.run_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション
+        self.run_frame = ttk.Frame(self, padding=(5,2))          # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。寄せる方向は英語の方角（North、South、East、West）の頭文字を指定します。
         self.run_frame.grid(row=6,column=1,sticky=E)
 
         # 実行ボタン
@@ -249,7 +250,7 @@ class Application(tk.Frame):
             #入力OK時(未入力なし)
             self.merge_file()                                  # ファイル結合(マージ)処理
             self.delete_progress()                             # プログレスバー削除処理
-            messagebox.showinfo("info", "処理が完了しました")  # 終了メッセージ表示処理
+            messagebox.showinfo("info", "処理が完了しました")   # 終了メッセージ表示処理
         else:
             #入力NG時(未入力あり)
             self.delete_progress()                             # プログレスバー削除処理
@@ -325,9 +326,9 @@ class Application(tk.Frame):
 # 主処理
 #---------------------------------------#
 def main():
-    root = tk.Tk()                     # Tkinterのフレーム起動(ウィンドウ画面オープン)
-    app = Application(master=root)     # Tkinterのフレームウィジェット(GUI)の動的作成
-    app.mainloop()                     # Tkinterの破棄・生成が永遠と実行される無限ループ
+    root = tk.Tk()                     # TkinterのTKフレーム起動(ウィンドウ画面オープン)
+    app = Application(master=root)     # Applicationクラスを実行する・・・・・・・・・TkinterのTKフレームウィジェット(GUI)の動的作成
+    app.mainloop()                     # Applicationクラスの無限ループを宣言する・・・Tkinterの破棄・生成が永遠と実行される
 
 #---------------------------------------#
 # 起動方法の指定
@@ -335,3 +336,4 @@ def main():
 if __name__ == "__main__":
     # 主処理
     main()
+
