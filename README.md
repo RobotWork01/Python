@@ -307,6 +307,9 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
 FreeSimpleGUIの使い方・クイックスタートガイド
 
+<a href="https://yuya-blog.net/%E3%80%90%E5%AE%8C%E5%85%A8%E7%8B%AC%E5%AD%A6python%E3%80%91tkinter%E3%81%AEttk%E3%81%AF%E3%81%93%E3%82%8C%E3%81%A0%E3%81%91%E8%A6%9A%E3%81%88%E3%81%A6%EF%BC%81%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91/">
+【完全独学Python】Tkinterのttkはこれだけ覚えて！初心者向けに徹底解説！</a> 
+
 ### 参考本：シゴトがはかどるPython自動処理の教科書
 <a href="https://www.google.co.jp/books/edition/_/XEYUEAAAQBAJ?hl=ja&sa=X&ved=2ahUKEwja0OaLwIGQAxU9klYBHY7BNywQ8fIDegQIGBAF">
 <img width="126" height="162" alt="image" src="https://github.com/user-attachments/assets/2c1605ab-2f6c-43c7-b7de-18f8c014b14e" />
