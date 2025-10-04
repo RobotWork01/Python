@@ -24,52 +24,66 @@
 #
 #----------------------------------------------------------------------------------------#
 import os
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#Pandas（パンダス）ライブラリ　※データ解析を効率的に行うためのオープンソースライブラリ
+#DataFrame（データフレーム）などのデータ構造と、データの読み込み、加工、集計、可視化を
+#簡単に行う機能、表形式のデータ分析利用。・・
+#----------------------------------------------------------------------------------------#
+#＜Pandasでできること＞
+#データの読み込みと書き出し：CSV、Excel、SQLなど、読み込んだり、書き出し。・・
+#データの整形・加工        ：欠損値の処理やデータ型の変換、データの結合や集計など行う。・・
+#データ構造の提供          ：
+# 1次元データ向けのSeries（シリーズ）と、
+# 2次元の表形式データ（ExcelやSQLのテーブルのようなもの）を扱うDataFrameを提供。・・
+#高速な処理：
+# パフォーマンスが重視される大量データ処理はCythonやC言語で実装され、高速処理できます。・・
+#他のライブラリとの連携：
+# NumPyやMatplotlib、Seabornといった他のデータ解析・可視化ライブラリと連携。・・
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 import pandas as pd
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-#threading(スレッディング)モジュールは、
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#threading(スレッディング)モジュールとは
 #Pythonでマルチスレッドプログラミングを行うための標準ライブラリです。
 #このモジュールを使用すると、複数のスレッドを作成し並列処理を実現できます。
 #スレッドは、OSがプログラムを実行する際の最小単位であり、
 #複数のスレッドを活用することで、効率的な処理が可能になります。
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 import threading
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-#tkinter(ティーケーインター)ライブラリは、
-# Python3でGUIアプリケーションを開発するための標準ライブラリです。
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-import tkinter as tk
-
-# Tkinter(ティーケーインター)に含まれる拡張モジュール
-from tkinter import *
-from tkinter import ttk            # ttkは、“themed tkinter”の略です！ttkを使うと、標準のtkウィジェットよりも見た目が良く、クロスプラットフォームで一貫したスタイルを持つウィジェットを作成できます！
+# Tkinter(ティーケーインター)ライブラリ　※Pythonに同梱される「標準ライブラリ」
+import tkinter as tk               # 標準のtkウィジェット
+from tkinter import *              # モジュール内で定義されているメソッドや変数をまとめてインポート
+from tkinter import ttk            # ttkを使うと、tkよりも見た目が良く、クロスプラットフォームで一貫したスタイルを持つウィジェット作成
 from tkinter import messagebox     # ポップアップメッセージボックス表示
 from tkinter import filedialog     # ダイアログ表示（ファイル選択、フォルダ選択）
 from tkinter import font           # 文字書式（カスタムフォントを作成）
 
 #------------------------------------------------------------------------------------------------#
-#class Application(tk.Frame):
-#   Tkinter(ティーケーインター)のフレームウィジェットを使用してアプリケーションのフレームを作成するためのクラス定義です。
-#   このクラス内で、フレームの親ウィジェットを定義し、フレーム内に他のウィジェットを配置するためのメソッドを定義します。
+#class Application(tk.Frame)とは:
+#   Tkinter(ティーケーインター)のフレームウィジェットを使用してアプリケーションのフレームを作成
+#   するためのクラス定義です。
+#   このクラス内で、フレームの親ウィジェット定義,フレーム内に他のウィジェットを配置するための
+#   メソッドを定義します。
 #   クラスをインスタンス化することで、フレームウィジェットを用いてアプリケーションの画面を構築することができます。
 #------------------------------------------------------------------------------------------------#
 class Application(tk.Frame):
-    #-----------------------------------------------------------#
+    #------------------------------------------------------------------------#
     #def __init__(self, master):
     #  クラスのインスタンスを生成する際に、masterという引数を受け取り、
     #  その値を初期化処理で利用するための構文です。
-    # -----------------------------------------------------------#
+    #------------------------------------------------------------------------#
     def __init__(self,master):
         super().__init__(master)                                           # フレームの親ウィジェットを定義
         self.pack(fill="both", expand=True)                                # pack(パック)・・・・・・・・・ TKオブジェクトの起動(フレームをウィンドウ全体に広げる)
-        self.master.title("RobotWork　[csv・Excelファイル結合(マージ)]")     # title(タイトル)・・・・・・・・ウィンドウ・タイトルの設定
+        self.master.title("RobotWork　[csv・Excelファイル結合(マージ)]")   # title(タイトル)・・・・・・・・ウィンドウ・タイトルの設定
         self.master.geometry('750x300')                                    # geometry (ジオメトリー)・・・・画面サイズ（幅x高さ)
         self.master.configure(bg="lightblue", padx=10, pady=10)            # configure(コンフィギュア)・・・画面背景色（lightblue）、X軸枠、Y軸枠
 
-        #------------------------------------------#
+        #---------------------------------------------#
         # Tkinterの「フレームウィジェット」動的作成
-        #------------------------------------------#
+        #---------------------------------------------#
         self.set_csv_widgets()
         self.set_excel_widgets()
         self.set_output_widgets()
@@ -85,7 +99,7 @@ class Application(tk.Frame):
         custom_font = font.Font(family="Helvetica", size=10, weight="bold")  # フォント書式名、文字サイズ、太字を指定
         
         # フレーム
-        self.csv_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション　　　　　
+        self.csv_frame = ttk.Frame(self, padding=10)            # TTKフレーム作成　第一引数：ルート　第二引数：オプション
         self.csv_frame.grid(row=0, column=1, sticky=E)          # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。寄せる方向は英語の方角（North、South、East、West）の頭文字を指定します。
 
         # 画面タイトル
@@ -142,7 +156,7 @@ class Application(tk.Frame):
         self.output_label.pack(side=LEFT)
 
         # テキストボックス
-        self.output_entry = StringVar()
+        self.output_entry = tk.StringVar()
         self.output_dir = ttk.Entry(self.output_frame, textvariable=self.output_entry, width=90)
         self.output_dir.pack(side=LEFT)
 
@@ -167,7 +181,7 @@ class Application(tk.Frame):
         # 終了ボタン
         self.e_button = ttk.Button(self.run_frame, text="終了", command=self.end_thread)
         #self.e_button.pack(side="right", padx=3, pady=3)
-        self.e_button.pack(side="right", pady=(1, 2), padx=(2, 3)) # ボタンの周囲にパディングを設定
+        self.e_button.pack(side="right", pady=(1, 2), padx=(2, 3))   # ボタンの周囲にパディングを設定
 
     #-----------------------------------------------------------#
     # 「参照ボタン（csv）押下時」の処理
@@ -210,29 +224,13 @@ class Application(tk.Frame):
     def end_thread(self):
         threading.Thread(target=self.end_clicked, daemon=True).start()
     def end_clicked(window, sele=None):
-        #---------------------------------------------#
-        # 確認メッセージ表示処理（はい・いいえ）
-        #---------------------------------------------#
-        ret = messagebox.askyesno('確認', '終了しますか？')
-        if ret == True:
-            #-------------------------------#
-            # アプリ終了処理
-            #-------------------------------#
-            window.tk.quit()
+        if messagebox.askyesno('確認', '終了しますか？'):window.tk.quit()
 
     # -----------------------------------------------------------#
     # 実行ボタン押下時の処理をスレッドで行う（プログレスバーを動かすため）
     # -----------------------------------------------------------#
     def run_thread(self):
-        #---------------------------------------------#
-        # 確認メッセージ表示処理（はい・いいえ）
-        #---------------------------------------------#
-        ret = messagebox.askyesno('確認', '実行しますか？')
-        if ret == True:
-            #-------------------------------#
-            # プログレスバー表示開始処理
-            #-------------------------------#
-            threading.Thread(target=self.run_clicked, daemon=True).start()
+        if messagebox.askyesno('確認', '実行しますか？'):threading.Thread(target=self.run_clicked, daemon=True).start()
 
     # -----------------------------------------------------------#
     # 「実行ボタン押下時」の処理
@@ -250,7 +248,7 @@ class Application(tk.Frame):
             #入力OK時(未入力なし)
             self.merge_file()                                  # ファイル結合(マージ)処理
             self.delete_progress()                             # プログレスバー削除処理
-            messagebox.showinfo("info", "処理が完了しました")   # 終了メッセージ表示処理
+            messagebox.showinfo("info", "処理が完了しました")  # 終了メッセージ表示処理
         else:
             #入力NG時(未入力あり)
             self.delete_progress()                             # プログレスバー削除処理
@@ -287,14 +285,10 @@ class Application(tk.Frame):
         output_path = self.output_entry.get()       # 出力フォルダ「出力フォルダのフルパス」
 
         # 未入力チェック処理
-        if csv_path == '':
-            alert_text += "csvファイル" + "\n"
-        if excel_path == '':
-            alert_text += "excelファイル" + "\n"
-        if output_path == '':
-            alert_text += "出力フォルダ" 
-        if alert_text:
-            alert_text = "以下のファイルの指定がありません" + "\n" + alert_text
+        if csv_path == '':alert_text += "csvファイル" + "\n"
+        if excel_path == '':alert_text += "excelファイル" + "\n"
+        if output_path == '':alert_text += "出力フォルダ" 
+        if alert_text:alert_text = "以下のファイルの指定がありません" + "\n" + alert_text
         return alert_text
 
     #---------------------------------------------#
@@ -338,6 +332,5 @@ def main():
 if __name__ == "__main__":
     # 主処理
     main()
-
 
 
