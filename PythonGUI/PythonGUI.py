@@ -23,10 +23,10 @@
 # exeファイルをダブルクリック
 #---------------------------------------------------------------#
 
-# PySimpleGUIパッケージの代替として、FreeSimpleGUIパッケージを利用
+# FreeSimpleGUI(フリー・シンプル・ジーユーアイ)パッケージ  ※PySimpleGUIパッケージの代替として利用
 import FreeSimpleGUI as sg
 
-# Tkinter(ティーケーインター)に含まれる拡張モジュール
+# Tkinter(ティーケーインター)ライブラリに含まれる拡張モジュール
 import tkinter as tk               # tkinter(ティーケー・インター)
 import tkinter.ttk as ttk          # ttkは、“themed tkinter”の略です！ttkを使うと、標準のtkウィジェットよりも見た目が良く、クロスプラットフォームで一貫したスタイルを持つウィジェットを作成できます！
 from tkinter import messagebox     # ポップアップメッセージボックス表示
@@ -66,7 +66,7 @@ layout = [
 [sg.Button('送信', key='-Btn-'), sg.Button('終了', key='-BEnd-')],                                      # sg.Button('ラベル名')
 ]
 
-# ウィンドウの作成
+# ウィンドウ作成
 window = sg.Window(
  'RobotWork01【FreeSimpleGUI】',     # ウィンドウタイトルを指定
  layout,
@@ -147,7 +147,7 @@ while True:
       continue
       #break
 
-# ウィンドウの破棄
+# ウィンドウ破棄
 sg.popup_ok('Pythonプログラム「PythonGUI」を終了しました！', title='終了メッセージ')
 window.close()
 
