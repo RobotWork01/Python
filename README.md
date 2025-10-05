@@ -378,6 +378,11 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 ＜＜実行結果＞＞
 <img width="1190" height="790" alt="image" src="https://github.com/user-attachments/assets/7a2bfb20-c818-4f2b-a296-f1a5a422e0ed" />
 
+###　CSVファイル読込み・検索（GUI）アプリ　※FreeSimpleGUI、pandas利用の場合
+<a href="./PythonCSV_AI/PythonCSV_AI.py">プログラムコードはこちらをクリック</a>
+＜＜実行結果＞＞
+<img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/1add2659-bd71-45b0-b511-3da5969417ce" />
+
 
 ### 参考サイト
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
