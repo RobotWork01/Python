@@ -135,11 +135,10 @@ class Application(tk.Frame):
         self.salary_label.pack(side=TOP)
 
         # リストボックス
-        self.student_listbox = tk.Listbox(self.main_frame5, width=70)  # TTKフレーム作成　第一引数：ルート　第二引数：オプション
+        self.student_listbox = tk.Listbox(self.main_frame5, width=110)      # フレーム(画面)作成　第一引数：ルート　第二引数：オプション
         self.student_listbox.bind('<<ListboxSelect>>', self.list_selected)  # リストボックス選択時をバインド
         self.main_frame5.columnconfigure(0, weight=3)
-        self.student_listbox.pack(side=LEFT)               # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。
-                                                           # 寄せる方向（North、South、East、West）の頭文字を指定します。
+        self.student_listbox.pack(side=LEFT) 
 
         #--------------------------------------#
         #         画面項目の再表示
@@ -257,81 +256,26 @@ class Application(tk.Frame):
     #-------------------------------#
     def update_student(self):
 
-        #画面項目「テキストボックス」に選択されたリストボックスの値を取得する
+        #画面項目「リストボックス」に選択された値を取得する
         selected_index = self.student_listbox.curselection()
 
         if selected_index:
 
-           #画面項目「リストボックス」の値を取得
-           selected_module = self.student_listbox.get(selected_index)
-            
-           #配列に分割
-           result1 = selected_module.split(",", 6)
-        
-           #配列の要素を取得
-           student_id = result1[2]
+           #ID取得
+           selected_module = self.student_listbox.get(selected_index) #画面項目「リストボックス」の値を取得
+           result1 = selected_module.split(",", 6)                    #配列に分割
+           student_id = result1[2]                                    #配列の要素を取得
+           o_student_id = student_id[2:len(student_id)]               #不要な文字「(」を除去:2文字目から文字桁分を取得
 
-           #不要な文字「(」を除去
-           o_student_id = student_id[2:len(student_id)]  #2文字目から文字桁分を取得
+           #画面項目「テキストボックス」に入力された値を取得する
+           name    = self.name_entry.get()
+           stclass = self.stclass_entry.get()
+           marks   = self.marks_entry.get()
 
-           ret = messagebox.askyesno('確認', '本当に更新しますか？')
+           ret = messagebox.askyesno('確認', f"本当に更新しますか？") 
            if ret == True:
-
-              #選択されている「リストボックス」の値からIDを取得する
-              name = self.name_entry.get()
-              stclass = self.stclass_entry.get()
-              marks  = self.marks_entry.get()
-              
-              #メッセージ
-              messagebox.showinfo("確認", f"UPDATE students SET name={name}, stclass={stclass}, marks={marks} WHERE id={o_student_id}")
-
-              if name and stclass and marks:
-              #画面項目「テキストボックス」の値が１つでも入力されていた場合
-                  #レコード更新の実行
-                  self.master.cursor.execute("UPDATE students SET name=?, stclass=?, marks=? WHERE id=?", (name, stclass, marks, o_student_id))
-                  self.master.conn.commit()
-                  
-                  #画面の再表示
-                  self.load_students()
-                  
-                  #画面のクリア
-                  self.clear_entries()
-                  
-                  messagebox.showinfo("確認", "レコード更新しました！")
-              else:
-                  messagebox.showwarning("確認", "リストボックス「更新対象データ」を選択してください")
-           else:
-              messagebox.showinfo("確認", "更新キャンセルしました！")
-
-    #-------------------------------#
-    #      レコード削除処理
-    #-------------------------------#
-    def delete_student(self):
-    
-        #画面項目「テキストボックス」に選択されたリストボックスの値を取得する
-        selected_index = self.student_listbox.curselection()
-
-        messagebox.showinfo("確認", "削除ボタン開始！")
-
-        if selected_index:
-
-           #画面項目「リストボックス」の値を取得
-           selected_module = self.student_listbox.get(selected_index)
-
-           #配列に分割
-           result1 = selected_module.split(",", 6)
-
-           #配列の要素を取得
-           student_id = result1[2]
-
-           #不要な文字「(」を除去
-           o_student_id = student_id[2:len(student_id)]  #2文字目から文字桁分を取得
-
-           ret = messagebox.askyesno('確認', f"本当に削除しますか？DELETE FROM students WHERE id={o_student_id}") 
-           if ret == True:
-              #レコード削除の実行
-              self.master.cursor.execute("DELETE FROM students WHERE id=?", (o_student_id,))
-              #self.master.cursor.execute("UPDATE students SET name=?, stclass=?, marks=? WHERE id=?", (name, stclass, marks, o_student_id))
+              #レコード更新の実行
+              self.master.cursor.execute("UPDATE students SET name=?, stclass=?, marks=? WHERE id=?", (name, stclass, marks, o_student_id))
               self.master.conn.commit()
 
               #画面の再表示
@@ -340,9 +284,46 @@ class Application(tk.Frame):
               #画面のクリア
               self.clear_entries()
 
-              messagebox.showinfo("確認", "レコード削除しました！")
+              sql_text=f"UPDATE students SET name={name}, stclass={stclass}, marks={marks} WHERE id={o_student_id}"
+              messagebox.showinfo("確認", f"レコード更新しました！\n{sql_text}")
            else:
-              messagebox.showinfo("確認", "削除キャンセルしました！")
+              messagebox.showinfo("確認", "更新キャンセルしました！")
+        else:
+           messagebox.showwarning("確認", "リストボックス「更新対象データ」を選択してください")
+
+    #-------------------------------#
+    #      レコード削除処理
+    #-------------------------------#
+    def delete_student(self):
+    
+        #画面項目「リストボックス」に選択された値を取得する
+        selected_index = self.student_listbox.curselection()
+
+        if selected_index:
+
+           #ID取得
+           selected_module = self.student_listbox.get(selected_index) #画面項目「リストボックス」の値を取得
+           result1 = selected_module.split(",", 6)                    #配列に分割
+           student_id = result1[2]                                    #配列の要素を取得
+           o_student_id = student_id[2:len(student_id)]               #不要な文字「(」を除去:2文字目から文字桁分を取得
+
+           ret = messagebox.askyesno('確認', f"本当に削除しますか？DELETE FROM students WHERE id={o_student_id}") 
+           if ret == True:
+              #レコード削除の実行
+              self.master.cursor.execute("DELETE FROM students WHERE id=?", (o_student_id,))
+              self.master.conn.commit()
+
+              #画面の再表示
+              self.load_students()
+
+              #画面のクリア
+              self.clear_entries()
+
+              sql_text=f"DELETE FROM students WHERE id={o_student_id}"
+              messagebox.showinfo("確認", "レコード削除しました！\n{sql_text}")
+           else:
+              sql_text=f"DELETE FROM students WHERE id={o_student_id}"
+              messagebox.showinfo("確認", "削除キャンセルしました！\n{sql_text}")
         else:
            messagebox.showwarning("確認", "リストボックス「削除対象データ」を選択してください")
 
