@@ -383,11 +383,10 @@ C:\Users\XXXXX\test>py -m  PyInstaller main.py --onefile
 ＜＜実行結果＞＞
 <img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/1add2659-bd71-45b0-b511-3da5969417ce" />
 
-### データベース読み書き
+### サーバーレスデータベース読み書きアプリ
 <a href="./PythonSQLLite/PythonSQLLite.py">プログラムコードはこちらをクリック</a>
 ＜＜実行結果＞＞
-<img width="940" height="790" alt="image" src="https://github.com/user-attachments/assets/783c00dc-5403-4f39-b217-d2bcea2e9ef2" />
-
+<img width="940" height="790" alt="image" src="https://github.com/user-attachments/assets/b037df9d-70d3-497b-91b8-217298435091" />
 
 ### 参考サイト
 <a href="https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028">https://zenn.dev/unr_tech_lab/articles/882fdddb2f8028</a>
