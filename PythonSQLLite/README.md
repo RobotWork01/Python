@@ -2,7 +2,7 @@
 
 ### アプリ概要
 このアプリは、Pythonで作ったアプリ画面(GUI)＋サーバレスデータベース更新アプリです、
-<img width="940" height="790" alt="image" src="https://github.com/user-attachments/assets/1a5a0d87-d6a0-4868-b476-a6f60f1786ed" />
+<img width="940" height="790" alt="image" src="https://github.com/user-attachments/assets/3cf97a0d-b4ad-411c-a519-f80fee4dd225" />
 
 ### 開発環境
 アプリ画面(GUI)は、Python標準装備されたTKInter（ティーケーインター）ライブラリ、
@@ -16,6 +16,7 @@
 ４．更新ボタンをクリックすると、リストボックスの選択された行より「students」テーブルのIDを取得して、テキストボックスの内容でレコード更新いたします。
 ５．削除ボタンをクリックすると、リストボックスの選択された行より「students」テーブルのIDを取得して、レコード削除いたします。
 ６．新規ボタンをクリックすると、テキストボックスに入力された内容でレコード追加（新規登録）します。
+７．CSVファイル出力ボタンをクリックすると、SQLLite（エスキューエル・ライト）データベースの「students」テーブルの全データをCSVファイル（utf-8）とCSVファイル（Shift-JIS）に出力いたします。
 ```
 
 ### 補足　＜SQLite（エスキューライト）とは＞
