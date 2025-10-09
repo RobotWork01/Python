@@ -213,13 +213,13 @@ class Application(tk.Frame):
                df2.to_csv(output_file_sjis, encoding='shift_jis', index=False)
 
                messagebox.showinfo("info", f"CSVファイル出力しました！\n\n\n ●utf-8：\n{input_file_utf8}\n\n●SHIFT-JIS:\n{output_file_sjis}")
+
            except sqlite3.Error as e:
-               print(f"データベースエラーが発生しました: {e}")
+               messagebox.showerror(f"データベースエラーが発生しました: {e}")
            except FileNotFoundError:
-               #print(f"指定されたデータベースファイルが見つかりませんでした: {db_path}")
-               print(f"指定されたデータベースファイルが見つかりませんでした")
+               messagebox.showerror(f"指定されたデータベースファイルが見つかりませんでした: {input_file_utf8}")
            except Exception as e:
-               print(f"その他のエラーが発生しました: {e}")
+               messagebox.showerror(f"その他のエラーが発生しました: {e}")
 
     #-------------------------------#
     #      レコード追加登録処理
@@ -363,6 +363,7 @@ class Application(tk.Frame):
            student_id = result1[2]                                    #配列の要素を取得
            o_student_id = student_id[2:len(student_id)]               #不要な文字「(」を除去:2文字目から文字桁分を取得
 
+
            ret = messagebox.askyesno('確認', f"本当に削除しますか？DELETE FROM students WHERE id={o_student_id}") 
            if ret == True:
               #レコード削除の実行
@@ -376,10 +377,10 @@ class Application(tk.Frame):
               self.clear_entries()
 
               sql_text=f"DELETE FROM students WHERE id={o_student_id}"
-              messagebox.showinfo("確認", "レコード削除しました！\n{sql_text}")
+              messagebox.showinfo("確認", f"レコード削除しました！\n{sql_text}")
            else:
               sql_text=f"DELETE FROM students WHERE id={o_student_id}"
-              messagebox.showinfo("確認", "削除キャンセルしました！\n{sql_text}")
+              messagebox.showinfo("確認", f"削除キャンセルしました！\n{sql_text}")
         else:
            messagebox.showwarning("確認", "リストボックス「削除対象データ」を選択してください")
 
