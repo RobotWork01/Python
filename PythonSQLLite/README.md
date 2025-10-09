@@ -1,4 +1,4 @@
-# PythonSQLLite
+# アプリ名「PythonSQLLite」
 
 ### アプリ概要
 このアプリは、Pythonで作ったアプリ画面(GUI)＋サーバレスデータベース更新アプリです、
