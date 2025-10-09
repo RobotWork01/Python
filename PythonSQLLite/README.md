@@ -42,6 +42,3 @@ SQL準拠：データベースの操作には標準的なSQL言語を使用で�
 # License
 The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
 
-# License
-The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
-
