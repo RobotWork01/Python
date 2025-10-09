@@ -4,7 +4,7 @@
 このアプリでは、CSVファイル読込み・検索（GUI）することが出来ます。　※FreeSimpleGUI、pandas
 <table>
 <tr>
-  <td><img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/596490f9-0b15-46e5-abc6-e61d94a2c953"  style="width: 50%; height: auto;" /></td>
+  <td><img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/596490f9-0b15-46e5-abc6-e61d94a2c953"  style="width: 90%; height: auto;" /></td>
   <td><img width="942" height="591" alt="image" src="https://github.com/user-attachments/assets/53700239-7f01-4a1e-a44d-ff4a9f07ddb7"  style="width: 50%; height: auto;" /></td>
 </tr>
 </table>
