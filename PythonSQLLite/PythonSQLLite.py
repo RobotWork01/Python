@@ -19,13 +19,14 @@
 #  PythonSQLLite.exe
 #
 #----------------------------------------------------------------------------------------#
-
 import tkinter as tk            #Pythonに同梱される「標準ライブラリ」(ティーケーインター)
 from tkinter import *           # モジュール内で定義されているメソッドや変数をまとめてインポート
 from tkinter import ttk         # ttkを使うと、tkよりも見た目が良く、クロスプラットフォームで一貫したスタイルを持つウィジェット作成出来ます
 import sqlite3                  #Pythonに同梱される「データベース」(エスキューエル・ライト)
 from tkinter import messagebox  #メッセージボックス作成ツール
 from tkinter import font        # 文字書式（カスタムフォントを作成）
+import pandas as pd
+from pathlib import Path
 
 #--------------------------------------#
 #     Applicationクラス
@@ -118,10 +119,18 @@ class Application(tk.Frame):
         # フレーム
         self.main_frame4 = ttk.Frame(self, padding=10)   # TTKフレーム作成　第一引数：ルート　第二引数：オプション
         self.main_frame4.grid(row=4, column=1, sticky=E) # グリッド枠 オプション：stickyではウィジェットを寄せる方向を指定できます。
+
+        # クリアボタン
+        self.clear_button = ttk.Button(self.main_frame4, text="クリア", command=self.clear_entries)
+        self.clear_button.pack(side=LEFT)
                                                          #寄せる方向（North、South、East、West）の頭文字を指定します。
         # 追加登録ボタン
         self.add_button = ttk.Button(self.main_frame4, text="追加登録", command=self.add_student)
         self.add_button.pack(side=LEFT)
+
+        # CSV出力ボタン
+        self.csv_button = ttk.Button(self.main_frame4, text="csvファイル出力", command=self.csv_student)
+        self.csv_button.pack(side=LEFT)
 
         #--------------------------------------#
         #       リストボックス作成
@@ -166,6 +175,53 @@ class Application(tk.Frame):
         self.e_button.pack(side="right", pady=(1, 2), padx=(2, 3))   # ボタンの周囲にパディングを設定
 
     #-------------------------------#
+    #      CSVファイル出力処理
+    #-------------------------------#
+    def csv_student(self):
+    
+        ret = messagebox.askyesno('確認', f"CSVファイル出力しますか？") 
+        if ret == True:
+
+           # 出力したいテーブル名
+           table_name = "students"
+
+           # ダウンロードフォルダへのパスを取得 (環境によってパスが異なる場合があります)
+           # 一般的なダウンロードフォルダのパスを指定します。必要に応じて変更してください。
+           download_dir = Path.home() / "Downloads"
+
+           # CSVファイル名を設定
+           csv_file_name = f"{table_name}_export.csv"
+           output_path = download_dir / csv_file_name
+
+           try:
+               # SQLクエリを作成してデータをDataFrameに読み込む
+               query = f"SELECT * FROM {table_name}"
+               df = pd.read_sql_query(query, self.master.conn)
+
+               # DataFrameをCSVファイルに出力
+               df.to_csv(output_path, index=False)
+
+               # 読み込みたいUTF-8のCSVファイル名
+               input_file_utf8 = f"{output_path}"
+               # 保存したいShift_JISのCSVファイル名
+               output_file_sjis = f"{output_path}_output.csv"
+
+               # UTF-8でCSVを読み込む
+               df2 = pd.read_csv(input_file_utf8, encoding='utf-8')
+
+               # Shift_JISでCSVを書き出す
+               df2.to_csv(output_file_sjis, encoding='shift_jis', index=False)
+
+               messagebox.showinfo("info", f"CSVファイル出力しました！\n\n\n ●utf-8：\n{input_file_utf8}\n\n●SHIFT-JIS:\n{output_file_sjis}")
+           except sqlite3.Error as e:
+               print(f"データベースエラーが発生しました: {e}")
+           except FileNotFoundError:
+               #print(f"指定されたデータベースファイルが見つかりませんでした: {db_path}")
+               print(f"指定されたデータベースファイルが見つかりませんでした")
+           except Exception as e:
+               print(f"その他のエラーが発生しました: {e}")
+
+    #-------------------------------#
     #      レコード追加登録処理
     #-------------------------------#
     def add_student(self):
@@ -180,7 +236,7 @@ class Application(tk.Frame):
             self.master.conn.commit()
             self.load_students()
             self.clear_entries()
-            messagebox.showinfo("info", "レコード追加登録しました！")  # 終了メッセージ表示処理
+            messagebox.showinfo("info", "レコード追加登録しました！")
         else:
             #画面項目「テキストボックス」の値が1つでも未入力がある場合
             #messagebox.showwarning("Warning", "Please fill in all fields.")
