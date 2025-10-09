@@ -4,8 +4,7 @@
 このアプリでは、CSVファイル読込み・検索（GUI）ことが出来ます。　※FreeSimpleGUI、pandas
 <img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/596490f9-0b15-46e5-abc6-e61d94a2c953" />
 
-このアプリはAIの回答を参考にいたしました。（<a href="https://github.com/RobotWork01/Python/blob/main/PythonCSV_AI/%E5%8F%82%E8%80%83%EF%BC%BFAI%E3%81%A7%E3%81%AE%E5%9B%9E%E7%AD%94.txt">
-https://github.com/RobotWork01/Python/blob/main/PythonCSV_AI/%E5%8F%82%E8%80%83%EF%BC%BFAI%E3%81%A7%E3%81%AE%E5%9B%9E%E7%AD%94.txt）</a>)
+このアプリは <a href="https://github.com/RobotWork01/Python/blob/main/PythonCSV_AI/%E5%8F%82%E8%80%83%EF%BC%BFAI%E3%81%A7%E3%81%AE%E5%9B%9E%E7%AD%94.txt">AIの回答</a> を参考にいたしました。
 
 ### アプリ機能説明
 ```
