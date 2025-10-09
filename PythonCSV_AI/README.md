@@ -4,6 +4,8 @@
 このアプリでは、CSVファイル読込み・検索（GUI）ことが出来ます。　※FreeSimpleGUI、pandas
 <img width="735" height="826" alt="image" src="https://github.com/user-attachments/assets/596490f9-0b15-46e5-abc6-e61d94a2c953" />
 
+このアプリはAIの回答を参考にいたしました。
+
 ### アプリ機能説明
 ```
 １．このアプリを起動すると、入力待ちの状態になります。
